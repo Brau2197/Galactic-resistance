@@ -1,7 +1,7 @@
-@import './stars'; //hay que cambiar a @use
+@import './stars';
 
 // fonts
-@font-face { font-family: SF Distant Galaxy; src: url(SF-Distant-Galaxy.ttf);}
+@font-face {font-family: SF Distant Galaxy; src: url(SF-Distant-Galaxy.ttf);}
 
 // Colors
 $Dark-blue: #16272E;
@@ -38,40 +38,80 @@ header {
       align-items: center;
       justify-content: space-between;
       width: 750px;
-      li {
-          display: inline-block;
+      ul {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        z-index: 1;
+        li {
           list-style: none;
-          margin-left: 50px;
+          margin-left: 40px;
+          cursor: pointer;
           a {
-            position: relative;
             color: #ffff;
+            border: 2px solid $Dark-blue;
             padding: 5px 10px;
             font-size: 1.6rem;
             text-decoration: none;
             font-family: DIN;
             font-weight: bolder;
+            transition: all 0.3s;
+            &:hover {
+              border: 2px solid $First-blue;
+              border-radius: 10px;
+              background: linear-gradient(to right, rgba(21, 93, 250, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 140, 253, 0.144) 100%);
+              box-shadow: inset 0 0 10px rgba(27, 189, 253, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+            }
           }
+        }
       }
       button {
-        font-family: DIN;
-        padding: 0.5em 1em;
-        outline: none;
-        border: 1px solid #303030;
-        background: #212121;
-        color: #ae00ff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 15px;
-        overflow: hidden;
-        transition: 0.2s;
-        border-radius: 20px;
+        background: linear-gradient(-45deg, $First-blue, $Second-blue, $First-purple, $First-blue);
+        background-size: 800% 400%;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        border: none;
         cursor: pointer;
-        font-weight: bold;
-        &:hover {
-            box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
-            transition-delay: 0.6s;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: 700;
+        z-index: 1;
+        color: white;
+        transition: all .5s ease-in-out;
+        animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+        svg {
+          transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
         }
-      }    
+        span {
+          transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+        &:hover {
+          animation: gradient 3s infinite;
+          transform: scale(1.05);
+          svg {
+            transform: translateX(5px) rotate(90deg);
+          }
+          span {
+            transform: translateX(5px);
+          }
+        }
+        &:active {
+          animation: gradient 3s infinite;
+          transform: scale(0.8);
+        }
+        @keyframes gradient {
+          0% {
+           background-position: 0% 50%;
+          }
+          50% {
+           background-position: 100% 50%;
+          }
+          100% {
+           background-position: 0% 50%;
+          }
+        }
+      }
     }
   }
 }
@@ -140,14 +180,58 @@ header {
     justify-content: center;
     align-content: center;
     position: absolute;
-    left: 30px;
+    left: 40px;
     top: 400px;
-    width: 35px;
+    width: 40px;
+    height: 110px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     li {
       list-style: none;
-      margin: 12px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 2px;
+      .icon {
+        background: $Dark-blue;
+        height: 3em;
+        width: 3em;
+        border-radius: 2em;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        p {
+          display: none;
+        }
+        img {
+          transition: all 0.5s;
+          color: #2CA0D9;
+          width: 2rem;
+          height: 2rem;
+        }
+        &:hover {
+          width: 100%;
+          border-radius: 20px;
+          width: 100px;
+          background: #32a2e4;
+          p {
+            display: inline;
+            margin-left: 5px;
+            color: #ffff;
+            font-family: DIN;
+            font-weight: bold;
+            font-size: 1.4rem;
+          }
+          img {
+          transform: rotate(360deg);
+          }
+        }
+      }
+      .discord:hover {
+        background: #404eed;
+      }
     }
   }
 }
@@ -393,26 +477,38 @@ header {
       color: #ffff;
     }
     button {
-      font-family: DIN;
-      padding: 1em 1.8em;
-      outline: none;
-      border: 1px solid #303030;
-      background: #212121;
-      color: #ae00ff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 15px;
-      overflow: hidden;
-      transition: 0.2s;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
+      background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+      background-size: 800% 400%;
+      padding: 1em 2em;
+      display: inline-block;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: white;
+      transition: all .5s ease-in-out;
+      animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
       &:hover {
-        box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
-        transition-delay: 0.6s;
+        animation: gradient 3s infinite;
+        transform: scale(1.05);
+      }
+      &:active {
+        animation: gradient 3s infinite;
+        transform: scale(0.8);
+      }
+      @keyframes gradient {
+        0% {
+         background-position: 0% 50%;
+        }
+        50% {
+         background-position: 100% 50%;
+        }
+        100% {
+         background-position: 0% 50%;
+        }
       }
     }
-  }
+  } 
 }
 .nft-items {
   width: 100%;
@@ -433,22 +529,47 @@ header {
     margin: 80px auto 0;
     .she {
       background: url(../Img/she.png);
-      background-position: center;
-      background-size: cover;
-      width: 350px;
-      height: 350px;
-      border-radius: 20px;
-      z-index: 1;
     }
     .he {
       background: url(../Img/he.png);
+    }
+    .card {
+      background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+      border-radius: 20px;
+      transition: all .3s;
+      z-index: 1;
+      :hover {
+        box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+      }
+     }
+     .card2 {
       background-position: center;
       background-size: cover;
-      width: 350px;
-      height: 350px;
       border-radius: 20px;
       z-index: 1;
-    }
+      width: 350px;
+      height: 350px;
+      border-radius: 15px;
+      transition: all .2s;
+      p {
+        display: none;
+        font-size: 1.8rem;
+      }
+      &:hover {
+        transform: scale(0.98);
+        border-radius: 20px;
+        background: $Dark-blue;
+        p {
+          display: grid;
+          width: 350px;
+          height: 350px;
+          align-content: center;
+          color: #fff;
+          padding: 25px;
+          border-radius: 20px;
+        }
+      }
+     }
   }
 
 }
@@ -475,20 +596,36 @@ header {
       color: #ffff;
     }
     button {
-      font-family: DIN;
-      padding: 1em 1.8em;
-      outline: none;
-      border: 1px solid #303030;
-      background: #212121;
-      color: #ae00ff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 15px;
-      overflow: hidden;
-      transition: 0.2s;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
+      background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+      background-size: 800% 400%;
+      padding: 1em 2em;
+      display: inline-block;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: white;
+      transition: all .5s ease-in-out;
+      animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+      &:hover {
+        animation: gradient 3s infinite;
+        transform: scale(1.05);
+      }
+      &:active {
+        animation: gradient 3s infinite;
+        transform: scale(0.8);
+      }
+      @keyframes gradient {
+        0% {
+         background-position: 0% 50%;
+        }
+        50% {
+         background-position: 100% 50%;
+        }
+        100% {
+         background-position: 0% 50%;
+        }
+      }
     }
   }
 }
@@ -501,4 +638,3 @@ footer {
   font-weight: bold;
   font-size: 1.6rem;
 } 
-
