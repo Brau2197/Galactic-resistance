@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galactic Resistance</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -31,10 +32,31 @@
       <img class="Couple" src="./Img/Couple 1.png" alt="Couple">
       <img class="Flares" src="./Img/Flares.png" alt="Flares">
       <div class="home-title">
-        <h1>THE STORY NEVER <br> TOLD TO HUMANITY</h1>
-        <div class="home-description">
+        <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800">THE STORY NEVER <br> TOLD TO HUMANITY</h1>
+        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800" class="home-description">
         <h2>NFT COLLECTION</h2>
-        <P>Creating a different world from the <br> one we know as planet Earth</P>
+        <p>Creating a different world from the <br> one we know as planet Earth</p>
+      </div>
+      <div class="countdown" data-aos="fade-right" data-aos-duration="1000">
+        <p class="countdown-title">The first collection is coming soon</p>
+        <p class="countdown-text">Public Mint on may 5th, 10:00am 100NFTs</p>
+        <div class="countdown-clock">
+          <div>
+            <span>4</span>
+            <p>DAYS</p>
+          </div>
+          <div>
+            <span>2</span>
+            <p>HOURS</p>
+          </div>
+          <div>
+            <span>16</span>
+            <p>MINUTES</p>
+          </div>
+          <div>
+            <span>14</span>
+            <p>SECONDS</p>
+          </div>
         </div>
       </div>
       <ul class="social-media">
@@ -61,7 +83,7 @@
     <section class="review">
       <img class="Lanscape-review" src="./Img/Landscape-review.png" alt="">
       <div class="review-container">
-        <h2>WELCOME TO THE ADVENTURE 
+        <h2 data-aos="fade-up" data-aos-easing="ease" data-aos-delay="300" data-aos-offset="0">WELCOME TO THE ADVENTURE 
           FUTURE MEMBER OF THE <strong>GALACTIC RESISTANCE</strong>
         </h2>
         <p>
@@ -191,15 +213,15 @@
       </div>
     </section>
     <section class="nft-items">
-      <h2>TOP <strong>ITEMS</strong></h2>
+      <h2 data-aos="fade-up" data-aos-duration="1000">TOP <strong>ITEMS</strong></h2>
       <div class="nft-items-container">
-        <div class="card"> 
+        <div class="card" data-aos="fade-up" data-aos-easing="ease-in-back"> 
           <div class="card2 she">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quis, in eum vero autem assumenda veritatis nisi velit, dolor sapiente voluptatibus expedita? Laudantium unde amet vitae vel iure quod perferendis.
             Qui perferendis, deleniti sunt facere fugit ab. Voluptatum aperiam aliquam hic minima impedit nostrum explicabo culpa ad, in, cupiditate repudiandae delectus? Molestias illo, aliquam et quae quod dicta ex quidem!uchdsdhsjdhsjdhshdshds</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="150">
           <div class="card2 he">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quis, in eum vero autem assumenda veritatis nisi velit, dolor sapiente voluptatibus expedita? Laudantium unde amet vitae vel iure quod perferendis.
             Qui perferendis, deleniti sunt facere fugit ab. Voluptatum aperiam aliquam hic minima impedit nostrum explicabo culpa ad, in, cupiditate repudiandae delectus? Molestias illo, aliquam et quae quod dicta ex quidem!uchdsdhsjdhsjdhshdshds</p>
@@ -217,5 +239,9 @@
   <footer>
       <p>© 2022 GALACTIC RESISTANCE</p>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
