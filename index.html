@@ -243,5 +243,11 @@
   <script>
     AOS.init();
   </script>
+  <script>
+    const header = document.querySelector('.header-container');
+    window.addEventListener('scroll', function(){
+      header.classList.toggle('active', window.scrollY >0)
+    }) 
+  </script>
 </body>
 </html>
