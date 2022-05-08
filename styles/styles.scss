@@ -126,13 +126,11 @@ header {
     padding: 10px;
     margin-top: 0;
     z-index: 3;
-
   }
 }
 .home {
   display: grid;
   align-items: flex-start;
-  width: 100%;
   height: 720px;
   padding-left: 160px;
   .Landscape {
@@ -331,6 +329,7 @@ header {
       margin-top: 60px;
       font-family: DIN;
       font-size: 2rem;
+      padding: 20px;
     }
   }
 }
@@ -527,9 +526,12 @@ header {
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
     align-items: center;
     width: 90%;
+    min-width: 300px;
     height: 300px;
     padding: 0 100px;
     z-index: 1;
@@ -538,13 +540,15 @@ header {
       font-family: DIN;
       font-weight: bold;
       color: #ffff;
+      min-width: 250px;
     }
     button {
       background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
       background-size: 800% 400%;
-      padding: 1em 2em;
+      padding: 15px 10px; 
       display: inline-block;
       border: none;
+      min-width: 200px;
       border-radius: 10px;
       font-size: 17px;
       font-weight: 700;
@@ -586,8 +590,11 @@ header {
   }
   .nft-items-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    gap: 40px;
     width: 70%;
     margin: 80px auto 0;
     .she {
@@ -610,8 +617,8 @@ header {
       background-size: cover;
       border-radius: 20px;
       z-index: 1;
-      width: 350px;
-      height: 350px;
+      width: 300px;
+      height: 300px;
       border-radius: 15px;
       transition: all .2s;
       p {
@@ -624,8 +631,8 @@ header {
         background: $Dark-blue;
         p {
           display: grid;
-          width: 350px;
-          height: 350px;
+          width: 300px;
+          height: 300px;
           align-content: center;
           color: #fff;
           padding: 25px;
@@ -646,9 +653,12 @@ header {
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
     align-items: center;
     width: 90%;
+    min-width: 300px;
     height: 300px;
     padding: 0 100px;
     z-index: 1;
@@ -657,13 +667,15 @@ header {
       font-family: DIN;
       font-weight: bold;
       color: #ffff;
+      min-width: 250px;
     }
     button {
       background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
       background-size: 800% 400%;
-      padding: 1em 2em;
+      padding: 15px 20px;
       display: inline-block;
       border: none;
+      min-width: 120px;
       border-radius: 10px;
       font-size: 17px;
       font-weight: 700;
