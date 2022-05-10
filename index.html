@@ -7,13 +7,14 @@
   <title>Galactic Resistance</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://kit.fontawesome.com/a5dde23d7c.js" crossorigin="anonymous"></script>
 </head>
 <body>
    <header>
     <div class="header-container">
       <img src="./Img/Title 1.svg" alt="LOGO">
       <nav>
-        <ul>
+        <ul class="menu">
           <li><a href="#">HOME</a></li>
           <li><a href="#">LITEPAPER</a></li>
           <li><a href="#">ABOUT</a></li>
@@ -24,9 +25,12 @@
           <span>Connect Wallet</span>
         </button>
       </nav>
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
   </header>
-  <main>
+  <main class="main">
     <section class="home">
       <img class="Landscape" src="./Img/Landscape_ 1.png" alt="Landscape">
       <img class="Couple" src="./Img/Couple 1.png" alt="Couple">
@@ -245,9 +249,18 @@
   </script>
   <script>
     const header = document.querySelector('.header-container');
+    const menu_btn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+    const main = document.querySelector('.main');
     window.addEventListener('scroll', function(){
       header.classList.toggle('active', window.scrollY >0)
     }) 
+    menu_btn.addEventListener('click', () => {
+      menu.classList.toggle('active')
+    })
+    main.addEventListener('click', () => {
+      menu.classList.remove('active')
+    })
   </script>
 </body>
 </html>
