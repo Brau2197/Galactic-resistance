@@ -36,7 +36,6 @@ header {
       width: 150px;
     }
     nav {
-      padding: 0 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -71,10 +70,14 @@ header {
             }
           }
         }
+        i {
+          display: none;
+        }
       }
       button {
         background: linear-gradient(-45deg, $First-blue, $Second-blue, $First-purple, $First-blue);
         background-size: 800% 400%;
+        min-width: 175px;
         margin-left: 20px;
         padding: 12px;
         display: flex;
@@ -123,11 +126,10 @@ header {
     }
     .menu-btn {
       position: absolute;
-      right: 20px;
+      right: 10px;
       width: 40px;
       display: none;
       cursor: pointer;
-      margin-left: 30px;
       i {
         font-size: 40px;
         color: #fff;
@@ -139,6 +141,11 @@ header {
     padding: 10px;
     margin-top: 0;
     z-index: 3;
+    nav {
+      button {
+        display: none;
+      }
+    }
   }
 }
 .home {
@@ -256,8 +263,8 @@ header {
     position: absolute;
     left: 40px;
     top: 400px;
-    width: 40px;
-    height: 110px;
+    width: 35px;
+    padding: 0 2px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     li {
@@ -265,7 +272,7 @@ header {
       position: relative;
       display: flex;
       justify-content: center;
-      padding: 2px;
+      margin: 5px 0;
       .icon {
         background: $Dark-blue;
         height: 3em;
@@ -660,7 +667,7 @@ header {
   display: grid;
   justify-items: center;
   align-items: center;
-  margin: 150px 0 150px;
+  margin: 150px 0 70px 0;
   .upcoming-items-container {
     background: url(../Img/background-upcoming.png);
     background-position: center;
@@ -717,11 +724,28 @@ header {
     }
   }
 }
+.social-media-phone {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    a  {
+      img {
+        width: 25px;
+      }
+    }
+  }
+
+}
 footer {
   width: 100%;
   background-color: #ffff;
   text-align: center;
   padding: 30px 0;
+  margin-top: 60px;
   font-family: DIN;
   font-weight: bold;
   font-size: 1.6rem;
@@ -759,6 +783,14 @@ footer {
           transform: translateX(-100%);
           li {
             margin-top: 30px;
+          }
+          i {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 15px;
+            color: #fff;
           }
         }
         .menu.active {
@@ -803,6 +835,23 @@ footer {
  }
 }
 @media (max-width: 575px) {
+  header {
+    .header-container {
+      nav {
+        button {
+          position: absolute;
+          margin-left: 0;
+          top: 100px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          z-index: -1;
+          &:hover {
+            transform: translate(-50%, 0);
+          }
+        }
+      } 
+    }
+  }
   .home {
     .home-title {
       h1 {
@@ -831,7 +880,13 @@ footer {
       height: 350px;
       top: 450px;
     }
+    .social-media {
+      display: none;
+    }
   }
+  .social-media-phone {
+    display: flex;
+  } 
   .review {
     .review-container {
       h2 {
